@@ -34,6 +34,13 @@ class HomePage extends StatelessWidget {
               Icons.search,
               color: Colors.white,
             ),
+          ),
+          IconButton(
+            onPressed: () {},
+            icon: const Icon(
+              Icons.mobile_friendly,
+              color: Colors.white,
+            ),
           )
         ],
       ),

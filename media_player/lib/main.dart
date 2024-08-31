@@ -36,8 +36,8 @@ class MyApp extends StatelessWidget {
           page: () => const VideoPage(),
         ),
         GetPage(
-          name: '/combo_page',
-          page: () => const ComboPage(),
+          name: '/combos_page',
+          page: () => const CombosPage(),
         ),
       ],
       // routes: AppRoutes.instance.routes,
