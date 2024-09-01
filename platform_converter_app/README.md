@@ -22,7 +22,7 @@ The portfolio website serves as a personal platform to showcase your professiona
 
 ###
 
-<div>
+<div align="center">
  <img src="https://github.com/user-attachments/assets/1dd4166a-636b-498a-a2a5-e5667859f06e" height=500px hspace=20>
  <img src="https://github.com/user-attachments/assets/01bc61e8-798d-458a-836a-f3370afcb09a" height=500px hspace=20>
  <img src="https://github.com/user-attachments/assets/7b1dd407-f104-4827-b149-afe2cc3bf8aa" height=500px hspace=20>
@@ -41,10 +41,10 @@ The portfolio website serves as a personal platform to showcase your professiona
 ###
 
 <div align="center">
- <img src="C:\Users\dell\Downloads\WhatsApp Image 2024-08-31 at 6.27.51 PM.jpeg" height=500px hspace=20>
- <img src="C:\Users\dell\Downloads\WhatsApp Image 2024-08-31 at 6.27.52 PM (1).jpeg" height=500px hspace=20>
- <img src="C:\Users\dell\Downloads\WhatsApp Image 2024-08-31 at 6.27.52 PM.jpeg" height=500px hspace=20>
- <img src="C:\Users\dell\Downloads\WhatsApp Image 2024-08-31 at 6.27.43 PM.jpeg" height=500px hspace=20>
- <img src="C:\Users\dell\Downloads\WhatsApp Image 2024-08-31 at 6.27.43 PM (1).jpeg" height=500px hspace=20>
+ <img src="https://github.com/user-attachments/assets/f78524e5-7f22-488a-865e-7c969b12fe3f" height=500px hspace=20>
+ <img src="https://github.com/user-attachments/assets/2b7d0a2a-ce4a-45f1-be6e-fa76732641ff" height=500px hspace=20>
+ <img src="https://github.com/user-attachments/assets/3fc1329a-8c5e-443b-a68f-342fe014e4dc" height=500px hspace=20>
+ <img src="https://github.com/user-attachments/assets/5900a0c2-0b7b-4f87-8bd7-344b1862e637" height=500px hspace=20>
+ <img src="https://github.com/user-attachments/assets/23651b09-51c2-4891-9232-70ff1e04dd36" height=500px hspace=20>
 </div>
 
