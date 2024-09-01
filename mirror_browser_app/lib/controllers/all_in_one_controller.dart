@@ -118,7 +118,7 @@ class BrowserController extends ChangeNotifier {
   }
 
   double progress = 0;
-  Future<void> onchange_progress(int progress) async {
+  Future<void> onChangeProgress(int progress) async {
     this.progress = progress / 100;
     notifyListeners();
   }

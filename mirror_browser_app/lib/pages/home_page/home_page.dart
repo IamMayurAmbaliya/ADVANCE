@@ -77,7 +77,7 @@ class _HomePageState extends State<HomePage> {
                     },
                     onProgressChanged: (controller, progress) {
                       Provider.of<BrowserController>(context, listen: false)
-                          .onchange_progress(progress);
+                          .onChangeProgress(progress);
                     },
 
                     // for the add to fav site
