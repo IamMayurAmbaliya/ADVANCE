@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:mirror_wall_browser_app/pages/home_page/home_page.dart';
 import 'package:mirror_wall_browser_app/provider/bookmark_provider.dart';
+import 'package:mirror_wall_browser_app/provider/controller/web_controller.dart';
 import 'package:mirror_wall_browser_app/provider/engine_provider.dart';
 import 'package:mirror_wall_browser_app/routes/app_routes.dart';
 import 'package:provider/provider.dart';
@@ -11,6 +12,7 @@ void main() {
       providers: [
         ChangeNotifierProvider(create: (context) => BookMarkProvider()),
         ChangeNotifierProvider(create: (context) => EngineProvider()),
+        ChangeNotifierProvider(create: (context) => WebController()),
       ],
       child: const MyApp(),
     ),

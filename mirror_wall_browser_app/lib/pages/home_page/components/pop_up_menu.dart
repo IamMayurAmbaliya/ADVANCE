@@ -1,36 +1,41 @@
 import 'package:flutter/material.dart';
 import 'package:mirror_wall_browser_app/provider/bookmark_provider.dart';
+import 'package:mirror_wall_browser_app/provider/controller/web_controller.dart';
 import 'package:mirror_wall_browser_app/provider/engine_provider.dart';
 import 'package:mirror_wall_browser_app/routes/app_routes.dart';
 import 'package:provider/provider.dart';
 
 Widget popUpMenuButtonAppBar(BuildContext context) {
-  BookMarkProvider historyProvider = Provider.of<BookMarkProvider>(context);
-  EngineProvider engineProvider = Provider.of<EngineProvider>(context);
-  EngineProvider engineProviderMethod = Provider.of<EngineProvider>(context);
+  BookMarkProvider bookMarkProvider = Provider.of<BookMarkProvider>(context);
+  WebController webProvider = Provider.of<WebController>(context);
+  WebController webProviderMethod =
+      Provider.of<WebController>(context, listen: false);
   return PopupMenuButton(
-    itemBuilder: (context) {
-      return <PopupMenuEntry>[
-        const PopupMenuItem(
-          value: "BookMark",
-          child: Text(
-            "BookMark",
-          ),
+    style: ButtonStyle(
+      backgroundColor: WidgetStateProperty.all(
+        Colors.white,
+      ),
+    ),
+    itemBuilder: (context) => <PopupMenuEntry>[
+      const PopupMenuItem(
+        value: "BookMark",
+        child: Text(
+          "BookMark",
         ),
-        const PopupMenuItem(
-          value: "History",
-          child: Text(
-            "History",
-          ),
+      ),
+      const PopupMenuItem(
+        value: "History",
+        child: Text(
+          "History",
         ),
-        const PopupMenuItem(
-          value: "Engine",
-          child: Text(
-            "Engine",
-          ),
+      ),
+      const PopupMenuItem(
+        value: "Engine",
+        child: Text(
+          "Engine",
         ),
-      ];
-    },
+      ),
+    ],
     onSelected: (value) {
       if (value == "BookMark") {
         showModalBottomSheet(
@@ -57,7 +62,7 @@ Widget popUpMenuButtonAppBar(BuildContext context) {
                     padding:
                         EdgeInsets.symmetric(vertical: 16.0, horizontal: 20.0),
                     child: Text(
-                      "Bookmarks",
+                      "BookMarks",
                       style: TextStyle(
                         fontSize: 24,
                         fontWeight: FontWeight.bold,
@@ -73,7 +78,7 @@ Widget popUpMenuButtonAppBar(BuildContext context) {
                   Expanded(
                     child: ListView.builder(
                       shrinkWrap: true,
-                      itemCount: historyProvider.bookmarkList.length,
+                      itemCount: bookMarkProvider.bookmarkList.length,
                       itemBuilder: (context, index) {
                         return Container(
                           margin: const EdgeInsets.symmetric(
@@ -91,16 +96,15 @@ Widget popUpMenuButtonAppBar(BuildContext context) {
                               ),
                             ],
                           ),
-                          child: const ListTile(
+                          child: ListTile(
                             title: Text(
-                              "ABCDE",
-                              // mainProvider.bookmarkList[index],
-                              style: TextStyle(
+                              bookMarkProvider.bookmarkList[index],
+                              style: const TextStyle(
                                 fontSize: 18,
                                 color: Colors.black87,
                               ),
                             ),
-                            trailing: Icon(
+                            trailing: const Icon(
                               Icons.bookmark,
                               color: Colors.blue,
                             ),
@@ -134,16 +138,15 @@ Widget popUpMenuButtonAppBar(BuildContext context) {
                       shrinkWrap: true,
                       itemBuilder: (context, index) {
                         return RadioListTile(
-                          title: Text(engineProvider.searchEngineNames[index]),
-                          value: engineProvider.searchEngineNames[index],
-                          groupValue: engineProvider.groupValue,
+                          title: Text(webProvider.searchEngineNames[index]),
+                          value: webProvider.searchEngineNames[index],
+                          groupValue: webProvider.groupValue,
                           onChanged: (value) {
-                            engineProviderMethod
+                            webProviderMethod
                                 .updateSearchEngineGroupValue(value!);
+                            webProviderMethod.searchEngine(value);
                             Navigator.pop(context);
                           },
-                          subtitle:
-                              Text(engineProvider.searchEngineNames[index]),
                         );
                       },
                     ),
